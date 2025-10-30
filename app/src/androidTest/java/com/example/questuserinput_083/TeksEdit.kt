@@ -63,4 +63,5 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             label = { Text(text = "Nama Lengkap") }
         )
 
- }
+        Spacer(modifier = Modifier.height(16.dp))
+
