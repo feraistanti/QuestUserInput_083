@@ -75,4 +75,12 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         )
                         .padding(end = 16.dp),
                     verticalAlignment = Alignment.CenterVertically
- }
+                ) {
+                    RadioButton(
+                        selected = textJK == item,
+                        onClick = { textJK = item }
+                    )
+                    Text(item)
+                }
+            }
+        }
