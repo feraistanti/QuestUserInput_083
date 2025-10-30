@@ -51,4 +51,8 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
         modifier = modifier.padding(top = 50.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
-  }
+    ) {
+        OutlinedTextField(
+            value = textNama,
+            onValueChange = {
+                textNama = it
