@@ -114,3 +114,10 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             Text(stringResource( R.string.submit))
         }
 
+        HorizontalDivider(
+            modifier = Modifier(buttom = dimensionResource(R.dimen.padding_medium), top = dimensionResource(
+                id = 30dp
+            )),
+            thickness = dimensionResource(R.dimen.devider_tipis),
+            color = Color.DarkGray
+        )
