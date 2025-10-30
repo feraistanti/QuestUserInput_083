@@ -65,3 +65,14 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        Row {
+            gender.forEach { item ->
+                Row(
+                    modifier = Modifier
+                        .selectable(
+                            selected = textJK == item,
+                            onClick = { textJK = item }
+                        )
+                        .padding(end = 16.dp),
+                    verticalAlignment = Alignment.CenterVertically
+ }
