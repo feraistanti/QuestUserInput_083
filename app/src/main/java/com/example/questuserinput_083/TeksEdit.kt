@@ -119,4 +119,32 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         )
                     )
 
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    // === JENIS KELAMIN ===
+                    Text(
+                        text = "JENIS KELAMIN",
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color.Black
+                    )
+                    genderOptions.forEach { jenisKelamin ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .selectable(
+                                    selected = (textJK == jenisKelamin),
+                                    onClick = { textJK = jenisKelamin }
+                                )
+                                .padding(vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            RadioButton(
+                                selected = (textJK == jenisKelamin),
+                                onClick = { textJK = jenisKelamin }
+                            )
+                            Text(text = jenisKelamin)
+                        }
+                    }
+
                     }
