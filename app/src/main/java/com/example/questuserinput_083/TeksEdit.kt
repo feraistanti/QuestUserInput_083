@@ -175,4 +175,26 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         }
                     }
 
-                    }
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    // === ALAMAT ===
+                    Text(
+                        text = "ALAMAT",
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color.Black
+                    )
+                    OutlinedTextField(
+                        value = textAlamat,
+                        onValueChange = { textAlamat = it },
+                        placeholder = { Text("Alamat lengkap") },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(100.dp),
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedBorderColor = Color(0xFF7E57C2),
+                            unfocusedBorderColor = Color.Gray
+                        )
+                    )
+
+                   }
