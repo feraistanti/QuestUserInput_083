@@ -147,4 +147,32 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         }
                     }
 
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    // === STATUS PERKAWINAN ===
+                    Text(
+                        text = "STATUS PERKAWINAN",
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color.Black
+                    )
+                    statusOptions.forEach { s ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .selectable(
+                                    selected = (textStatus == s),
+                                    onClick = { textStatus = s }
+                                )
+                                .padding(vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            RadioButton(
+                                selected = (textStatus == s),
+                                onClick = { textStatus = s }
+                            )
+                            Text(text = s)
+                        }
+                    }
+
                     }
