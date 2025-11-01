@@ -197,4 +197,26 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         )
                     )
 
-                   }
+                    Spacer(modifier = Modifier.height(24.dp))
+
+                    // === TOMBOL SUBMIT ===
+                    Button(
+                        onClick = {
+                            nama = textNama
+                            jenis = textJK
+                            status = textStatus
+                            alamat = textAlamat
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(48.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF7E57C2)
+                        ),
+                        shape = MaterialTheme.shapes.medium
+                    ) {
+                        Text("Submit", color = Color.White)
+                    }
+                }
+            }
+
